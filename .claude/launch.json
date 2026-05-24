@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "veridion-dev",
+      "runtimeExecutable": "corepack",
+      "runtimeArgs": ["yarn@1.22.22", "dev"],
+      "port": 5173
+    }
+  ]
+}
