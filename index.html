@@ -7,12 +7,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <title>Veridion</title>
   </head>
   <body>
+    <!--
+      Static form for Netlify Forms detection.
+      Netlify's build-time parser only sees static HTML, not React components.
+      This hidden form tells Netlify what fields to expect. The live form is
+      rendered by <Contact /> and POSTs to "/" — Netlify intercepts that
+      submission and stores it in the Forms dashboard.
+      Spam protection: data-netlify-honeypot="bot-field" silently drops
+      submissions where the hidden bot-field is filled in (humans won't, bots will).
+    -->
+    <form
+      name="contact"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <input type="text" name="topic" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

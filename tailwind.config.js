@@ -5,16 +5,35 @@ export default {
     extend: {
       colors: {
         veridion: {
-          50: '#f0fdf4',
-          100: '#dcfce7',
-          500: '#10b981',
-          600: '#059669',
-          700: '#047857',
-          900: '#064e3b',
+          // Surfaces / backgrounds
+          bg: '#faf5f0',
+          surface: '#fcfaf7',
+          // Inks
+          ink: '#0d0d0d',
+          body: '#272727',
+          muted: '#4a4a4c',
+          // Primary brand accent (rust)
+          rust: {
+            DEFAULT: '#a6370f',
+            600: '#8a2d0c',
+            700: '#6f240a',
+          },
+          // Earth tones
+          brown: '#735236',
+          clay: '#9c6349',
+          sage: '#405957',
+          sand: '#a6a594',
         },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Sora', 'Inter', 'system-ui', 'sans-serif'],
+      },
+      borderRadius: {
+        card: '8px',
+      },
+      backdropBlur: {
+        card: '20px',
       },
     },
   },
